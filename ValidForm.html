@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <form action="" method="post" id="registrationForm" class="registration-form">
+        <h2>Registration Form</h2>
+        <div class="field">
+            <label for="fullname">Full Name:</label><br>
+            <input type="text" id="fullname" name="fullname" maxlength="60"><br>
+            <p id="fullNameError" class="error"></p>
+        </div>
+        <div class="field">
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" maxlength="70" required><br>
+            <p id="emailError" class="error"></p>
+        </div>
+        <div class="field">
+            <label for="phone">Phone:</label><br>
+            <input type="tel" id="phone" name="phone" maxlength="13" required><br>
+            <p id="phoneError" class="error"></p>
+        </div>
+        <div class="field">
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" value="123Qwe&" required><br>
+            <p id="passwordError" class="error"></p>
+        </div>
+        <div class="field">
+            <label for="confirmPassword">Confirm Password:</label><br>
+            <input type="password" id="confirmPassword" name="confirmPassword"><br>
+            <p id="confirmPasswordError" class="error"></p>
+        </div>
+        <button type="submit">Register</button>
+        <p id="validation_result" class="success"></p>
+    </form>
+    <script src="js/script.js"></script>
+    <script>
+        formValidation('registrationForm');
+    </script>
+</body>
+</html>
